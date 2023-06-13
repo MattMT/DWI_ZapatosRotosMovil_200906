@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/etNumeroControl"
+        android:layout_marginTop="4dp"
+        android:hint="Numero de control"
+        android:textAlignment="center"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/etTipo"
+        android:layout_marginTop="4dp"
+        android:layout_below="@+id/etNumeroControl"
+        android:hint="Tipo de calzado"
+        android:textAlignment="center"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/etMarca"
+        android:layout_marginTop="4dp"
+        android:layout_below="@+id/etTipo"
+        android:hint="Marca"
+        android:textAlignment="center"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/etTalla"
+        android:layout_marginTop="4dp"
+        android:layout_below="@+id/etMarca"
+        android:hint="Talla"
+        android:textAlignment="center"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/etPrecioCompra"
+        android:layout_marginTop="4dp"
+        android:layout_below="@+id/etTalla"
+        android:hint="Precio de compra"
+        android:textAlignment="center"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/etPrecioVenta"
+        android:layout_marginTop="4dp"
+        android:layout_below="@+id/etPrecioCompra"
+        android:hint="Precio de venta"
+        android:textAlignment="center"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/etExistencias"
+        android:layout_marginTop="4dp"
+        android:layout_below="@+id/etPrecioVenta"
+        android:hint="Existencias"
+        android:textAlignment="center"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/vButtonsT"
+        android:layout_below="@+id/etExistencias"
+        android:gravity="center">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/btnBuscar"
+            android:text="Buscar"
+            android:backgroundTint="@color/previous"
+            android:layout_margin="4dp"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/btnGuardar"
+            android:text="Guardar"
+            android:backgroundTint="@color/ready"
+            android:layout_margin="4dp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/vButtonsB"
+        android:layout_below="@+id/vButtonsT"
+        android:gravity="center">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/btnEliminar"
+            android:text="Eliminar"
+            android:backgroundTint="@color/danger"
+            android:layout_margin="4dp"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/btnActualizar"
+            android:text="Actualizar"
+            android:backgroundTint="@color/alert"
+            android:layout_margin="4dp"/>
+
+    </LinearLayout>
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/lvCalzados"
+        android:layout_below="@+id/vButtonsB"/>
+
+</RelativeLayout>
